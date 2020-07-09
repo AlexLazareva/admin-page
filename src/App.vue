@@ -10,10 +10,13 @@
           alt="App Logo"
           class="shrink mr-2"
           contain
-          src="src/assets/logo.svg"
+          src="./assets/logo.svg"
           transition="scale-transition"
           width="40"
         />
+        <div class="d-flex align-center">
+          Админка
+        </div>
       </div>
 
       <v-spacer></v-spacer>
