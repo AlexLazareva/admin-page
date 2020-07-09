@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="App Logo"
+          class="shrink mr-2"
+          contain
+          src="src/assets/logo.svg"
+          transition="scale-transition"
+          width="40"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="/"
+        text
+      >
+        <span class="mr-2">Выход</span>
+        <v-icon>mdi-exit-to-app</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <AdminPage />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AdminPage from './pages/AdminPage';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    AdminPage,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
